@@ -2,6 +2,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "../App.css"; // ✅ Ensure CSS is applied
 
 function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -24,7 +25,7 @@ function Login() {
   };
 
   return (
-    <div>
+    <div className="form-container">
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <input name="email" type="email" placeholder="Email" onChange={handleChange} required />

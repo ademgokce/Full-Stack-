@@ -1,6 +1,7 @@
 // src/pages/Dashboard.js
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../App.css"; // Make sure to import your global styles
 
 function Dashboard() {
   const [user, setUser] = useState(null);
@@ -22,7 +23,7 @@ function Dashboard() {
   };
 
   return (
-    <div>
+    <div className="form-container">
       <h2>Dashboard</h2>
       <p>{user}</p>
       <button onClick={handleLogout}>Logout</button>
